@@ -1,0 +1,50 @@
+std_id=input("Enter the ID:")
+std_name=input("Enter the name:")
+attd=float(input("Enter your attendance percentage:"))
+
+marks_list =[]
+count=0
+while count < 5:
+    marks = int(input("Enter the marks:"))
+    marks_list.append(marks)
+    count += 1
+
+
+    if count<5:
+        mrks=input("Do u want enter the marks (yes/no)")
+        if mrks != "yes":
+            break
+print("marks:",marks_list)
+# total score of the marks
+Total_marks = sum(marks_list)
+print("sum of marks=",Total_marks)
+
+avg_marks= Total_marks/len(marks_list)
+print("average of marks:",avg_marks)
+
+number_marks=len(marks_list)
+print("number of subjects:",number_marks) 
+
+if avg_marks >= 85:
+    print("grade of student is : A")
+elif avg_marks >=70:
+    print(" Grade of student as : B")
+elif avg_marks >=50:
+    print("grade of student is : C")
+else:
+    print("The student is :Failed")
+
+if attd >=75:
+    print("the attendance is good.")
+else:
+    print("Warning low attendance:")
+
+#Award conserdation = attd >75 + grade A
+if attd >=75 and avg_marks>=85:
+    print("Your are eligible for award!")
+else:
+    print("Your are not eligible for award!")
+
+
+
+
